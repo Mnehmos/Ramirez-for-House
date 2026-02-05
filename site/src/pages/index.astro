@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Workers Getting Their Dues">
+  <section class="hero">
+    <p class="tagline">Arizona House &middot; District 19 &middot; 2026</p>
+    <h1>Workers Getting Their Dues</h1>
+    <p class="subtitle">
+      Third-generation Arizona copper. Six bills. No slogans. Running to prove working-class politics works.
+    </p>
+    <div style="margin-top: 2rem;">
+      <a href={`${base}bills`} class="btn">See the Bills</a>
+      <a href={`${base}donate`} class="btn btn-outline">Contribute $5</a>
+    </div>
+  </section>
+
+  <div class="content">
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-number">$4B+</div>
+        <div class="stat-label">Copper extracted yearly</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">6&cent;</div>
+        <div class="stat-label">Per dollar stays local</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">17.7%</div>
+        <div class="stat-label">Poverty rate, mining country</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">0</div>
+        <div class="stat-label">Hospitals in Greenlee County</div>
+      </div>
+    </div>
+
+    <h2>The Pitch</h2>
+    <p>
+      I'm Levario Ramirez. I grew up in Hayden-Winkelman &mdash; a smelter town where the soil had to be excavated because of contamination. A town that's lost 75% of its population.
+    </p>
+    <p>
+      I ran heavy equipment at Freeport-McMoRan's Morenci mine for six years. Perfect safety record. I know what it means to do the work that builds this state.
+    </p>
+    <p>
+      I'm running because the people who produce Arizona's wealth deserve their share of it. Not a handout &mdash; their <em>share</em>. We dig the copper, we grow the cotton, we teach the kids, and we deserve representation that fights for us instead of the shareholders.
+    </p>
+
+    <h2>Six Bills</h2>
+    <p>
+      Anyone can say they support workers or oppose poverty. That's meaningless without specifics. These bills are the specifics &mdash; what I would actually do in office.
+    </p>
+
+    <a href={`${base}water`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(33, 150, 243, 0.2); color: #2196F3;">Bill 1</span>
+      <h3>Family Well Protection Act</h3>
+      <p>Your water before their profits. Protect residential wells from industrial drawdown.</p>
+    </a>
+
+    <a href={`${base}copper`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(184, 115, 51, 0.2); color: #B87333;">Bill 2</span>
+      <h3>Mine to Wire &amp; Chip Act</h3>
+      <p>Keep value-add manufacturing in mining country. Raise the severance tax from 2.5% to 5%.</p>
+    </a>
+
+    <a href={`${base}workers`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(244, 67, 54, 0.2); color: #F44336;">Bill 3</span>
+      <h3>Worker Privacy &amp; Safety Act</h3>
+      <p>Legal on Friday, fired on Monday. Fix the cannabis testing contradiction. Restore worker safety voice.</p>
+    </a>
+
+    <a href={`${base}poverty`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(76, 175, 80, 0.2); color: #4CAF50;">Bill 4</span>
+      <h3>Rural Healthcare Access Act</h3>
+      <p>A hospital in Greenlee County. Healthcare for mining communities and retirees.</p>
+    </a>
+
+    <a href={`${base}education`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(255, 152, 0, 0.2); color: #FF9800;">Bill 5</span>
+      <h3>Arizona Education Equity Act</h3>
+      <p>Fund rural schools fairly. Recruit teachers. Expand dual enrollment with EAC.</p>
+    </a>
+
+    <a href={`${base}history`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(139, 69, 19, 0.2); color: #CD853F;">Bill 6</span>
+      <h3>Worker Housing Freedom Act</h3>
+      <p>End company town feudalism. Your home shouldn't depend on your employer's goodwill.</p>
+    </a>
+
+    <div class="donation-banner">
+      <h3>$5 Gets Us on the Ballot</h3>
+      <p>
+        Arizona Clean Elections: 220 people contributing $5 qualifies a candidate for public financing. No corporate money. Just neighbors believing in each other.
+      </p>
+      <a href={`${base}donate`} class="btn">Contribute $5</a>
+    </div>
+
+    <h2>Still Skeptical?</h2>
+    <p>Good. You should be. Politicians lie.</p>
+    <p>
+      Here's my offer: I'll be delivering DoorDash in Safford. I'll be at the county fair. I'll be knocking on your door. Ask me anything. Push back. Tell me I'm wrong.
+    </p>
+    <p>
+      I'd rather have an honest argument than a fake agreement.
+    </p>
+    <p style="margin-top: 1.5rem; color: var(--color-muted);">
+      &mdash; Levario Ramirez<br />
+      Third-generation Arizona copper<br />
+      DSA Graham County
+    </p>
+  </div>
+</Layout>

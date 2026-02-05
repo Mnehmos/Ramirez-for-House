@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Mine to Wire & Chip Act" accent="#B87333">
+  <div class="content">
+    <p class="tagline" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #B87333;">Bill 2 &middot; Copper</p>
+    <h1>We Produce the Wealth. We Deserve Our Share.</h1>
+
+    <p>
+      Arizona produces copper. It doesn't process copper. Morenci and Safford produce 99.99% pure copper cathode &mdash; then ship it out of state to become wire, cable, rod, and components. The value-add jobs leave with it.
+    </p>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-number">$4B+</div>
+        <div class="stat-label">Copper extracted yearly</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">6&cent;</div>
+        <div class="stat-label">Per dollar stays local</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">90%</div>
+        <div class="stat-label">Greenlee County GDP from mining</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">17.7%</div>
+        <div class="stat-label">Poverty rate in mining country</div>
+      </div>
+    </div>
+
+    <h2>The Extraction Math</h2>
+    <p>
+      Freeport-McMoRan made $22.9 billion in revenue in 2023. $1.9 billion in net income. Their CEO earned $23.9 million. Greenlee County &mdash; where they extract most of that value &mdash; has a 17.7% poverty rate.
+    </p>
+    <p>
+      Of every dollar of copper pulled from Arizona soil, about 6-7 cents stays in the community. The rest goes to shareholders in Phoenix and New York.
+    </p>
+
+    <h2>The Bill</h2>
+    <p>
+      The <strong>Mine to Wire &amp; Chip Act</strong> has two parts. First, the Mining Community Investment Act raises Arizona's mining severance tax from 2.5% to 5% &mdash; generating an additional $135 million per year for extraction counties. That money goes to schools, roads, healthcare, and economic diversification.
+    </p>
+    <p>
+      Second, value-add manufacturing incentives create tax breaks for copper rod mills, wire drawing, and component manufacturing within 50 miles of extraction sites, plus workforce training partnerships with Eastern Arizona College.
+    </p>
+    <p>
+      Even at 5%, Arizona remains <strong>below</strong> Montana, New Mexico, and Nevada's severance tax rates.
+    </p>
+
+    <h2>The Model</h2>
+    <p>
+      Southwire built a $100 million copper rod mill in Carrollton, Georgia &mdash; a town that has to <em>import</em> cathode. We <em>produce</em> cathode. The economics favor local processing when someone creates the right conditions.
+    </p>
+
+    <h2>The History</h2>
+    <p>
+      Greenlee County voted Democratic from 1912 to 1996. Then Phelps Dodge broke the union in 1983-86 &mdash; brought in the National Guard, replaced workers with scabs. Union membership dropped from 8.8% to 3.7%.
+    </p>
+    <p>
+      The politics followed the economics. When workers lost power, the community lost wealth.
+    </p>
+
+    <blockquote>
+      "I'm not anti-Freeport. I'm pro-Graham County. Those should be the same thing."
+    </blockquote>
+
+    <div class="donation-banner">
+      <h3>Support the Mine to Wire Act</h3>
+      <p>From extraction to finished product. Right here in Mining Country.</p>
+      <a href={`${base}donate`} class="btn">Contribute $5</a>
+    </div>
+  </div>
+</Layout>

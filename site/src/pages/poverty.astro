@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Rural Healthcare Access" accent="#4CAF50">
+  <div class="content">
+    <p class="tagline" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #4CAF50;">Bill 4 &middot; Healthcare</p>
+    <h1>Greenlee County Has No Hospital</h1>
+
+    <p>
+      The nearest ER from Morenci is in Safford &mdash; 40+ minutes away. For a community built around one of the most dangerous industries in America, this is unconscionable.
+    </p>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-number" style="color: #4CAF50;">0</div>
+        <div class="stat-label">Hospitals in Greenlee County</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #4CAF50;">40+</div>
+        <div class="stat-label">Minutes to nearest ER</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #4CAF50;">73.3</div>
+        <div class="stat-label">Median age, Green Valley</div>
+      </div>
+    </div>
+
+    <h2>The Reality</h2>
+    <p>
+      Mining injuries require immediate trauma care. Forty minutes is the difference between recovery and permanent disability. Green Valley retirees &mdash; median age 73, 68% relying on retirement income &mdash; face declining healthcare access as rural facilities close.
+    </p>
+
+    <h2>The Bill</h2>
+    <p>
+      The <strong>Rural Healthcare Access Act</strong> provides state matching funds for rural hospital construction in extraction counties, expands telehealth through broadband infrastructure grants, offers loan forgiveness and housing assistance for healthcare workers who serve rural Arizona for 3+ years, and requires mining operations above 500 employees to maintain on-site emergency medical facilities.
+    </p>
+
+    <h2>The Connection</h2>
+    <p>
+      Freeport-McMoRan profits $1.9 billion. Greenlee County can't keep a hospital open. The Mining Community Investment Act generates the revenue. This bill directs part of it to healthcare.
+    </p>
+
+    <blockquote>
+      "If you get hurt in the pit at Morenci, the nearest ER is 40 minutes away. That's not healthcare &mdash; that's a gamble."
+    </blockquote>
+
+    <div class="donation-banner">
+      <h3>Support Rural Healthcare</h3>
+      <p>Every community deserves access to emergency care.</p>
+      <a href={`${base}donate`} class="btn" style="background: #4CAF50;">Contribute $5</a>
+    </div>
+  </div>
+</Layout>

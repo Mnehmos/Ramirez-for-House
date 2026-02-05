@@ -1,0 +1,306 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  accent?: string;
+}
+
+const {
+  title,
+  description = "Ramirez for Arizona House — LD-19. Workers Getting Their Dues.",
+  accent = "#B87333"
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title} | Ramirez for House</title>
+  <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style define:vars={{ accent }}>
+    :root {
+      --color-bg: #0a0a0a;
+      --color-surface: #141414;
+      --color-text: #e8e8e8;
+      --color-muted: #888;
+      --color-accent: var(--accent);
+      --font-heading: 'Space Grotesk', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --max-width: 720px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; }
+    h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; }
+    h2 { font-size: 1.75rem; font-weight: 600; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--color-accent); }
+    h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+
+    p { margin-bottom: 1rem; }
+    a { color: var(--color-accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    blockquote {
+      border-left: 3px solid var(--color-accent);
+      padding-left: 1.5rem;
+      margin: 1.5rem 0;
+      color: var(--color-muted);
+      font-style: italic;
+    }
+
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #222;
+    }
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-brand {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+    .nav-brand:hover { text-decoration: none; }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--color-text); text-decoration: none; }
+    .nav-links .donate-link {
+      background: var(--color-accent);
+      color: var(--color-bg);
+      padding: 0.4rem 0.9rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .nav-links .donate-link:hover { opacity: 0.9; }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--color-text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* MAIN CONTENT */
+    .content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero .tagline {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-muted);
+      margin-bottom: 0.5rem;
+    }
+    .hero h1 { font-size: 3rem; }
+    .hero .subtitle {
+      font-size: 1.25rem;
+      color: var(--color-muted);
+      max-width: 600px;
+      margin: 1.5rem auto;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--color-accent);
+      color: var(--color-bg);
+      font-weight: 600;
+      font-family: var(--font-heading);
+      border-radius: 4px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      margin: 0.5rem;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(184, 115, 51, 0.3);
+      text-decoration: none;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    /* BILL CARD */
+    .bill-card {
+      background: var(--color-surface);
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: border-color 0.2s;
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+    .bill-card:hover { border-color: var(--color-accent); text-decoration: none; }
+    .bill-card h3 { margin-top: 0; color: var(--color-text); }
+    .bill-card p { color: var(--color-muted); margin-bottom: 0; }
+    .bill-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.25rem 0.5rem;
+      border-radius: 3px;
+      margin-bottom: 0.75rem;
+    }
+
+    /* DONATION BANNER */
+    .donation-banner {
+      background: var(--color-surface);
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .donation-banner h3 { color: var(--color-accent); margin-top: 0; }
+
+    /* STAT */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .stat {
+      background: var(--color-surface);
+      padding: 1.25rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-accent);
+    }
+    .stat-label { font-size: 0.85rem; color: var(--color-muted); }
+
+    /* FOOTER */
+    .footer {
+      margin-top: 4rem;
+      padding: 2rem;
+      background: var(--color-surface);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      border-top: 1px solid #222;
+    }
+    .footer a { color: var(--color-accent); }
+    .footer-links { margin-top: 1rem; }
+    .footer-links a { margin: 0 0.5rem; }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-bg);
+        border-bottom: 1px solid #222;
+        padding: 1rem;
+      }
+      .hamburger { display: block; }
+      .hero h1 { font-size: 2rem; }
+      h1 { font-size: 1.75rem; }
+      h2 { font-size: 1.4rem; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href={base} class="nav-brand">Ramirez for House</a>
+      <button class="hamburger" aria-label="Menu" id="menu-toggle">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href={`${base}about`}>About</a></li>
+        <li><a href={`${base}water`}>Water</a></li>
+        <li><a href={`${base}copper`}>Copper</a></li>
+        <li><a href={`${base}workers`}>Workers</a></li>
+        <li><a href={`${base}education`}>Education</a></li>
+        <li><a href={`${base}bills`}>Bills</a></li>
+        <li><a href={`${base}donate`} class="donate-link">Donate $5</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <slot />
+
+  <footer class="footer">
+    <p><strong>Paid for by Ramirez for House</strong></p>
+    <p>Third-generation Arizona copper. DSA Graham County.</p>
+    <div class="footer-links">
+      <a href={`${base}bills`}>All Bills</a> &middot;
+      <a href={`${base}about`}>About</a> &middot;
+      <a href={`${base}donate`}>Contribute $5</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle')?.addEventListener('click', () => {
+      document.getElementById('nav-links')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Arizona Education Equity Act" accent="#FF9800">
+  <div class="content">
+    <p class="tagline" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #FF9800;">Bill 5 &middot; Education</p>
+    <h1>Why Can't Rural Schools Recruit Teachers?</h1>
+
+    <h2>Personal</h2>
+    <p>
+      I dropped out of Safford High. Not because it was hard. Because my physics teacher was actually the biology teacher, and he couldn't answer basic questions.
+    </p>
+    <p>
+      I went to Eastern Arizona College, earned 120 credits, and was named Engineering Student of the Year 2022. The system failed me. I routed around it. Not every kid can do that.
+    </p>
+
+    <h2>The Problem</h2>
+    <p>
+      Rural schools can't compete on salary. There's no housing assistance for teachers in small towns. Funding formulas don't account for rural costs &mdash; transportation, facility maintenance, smaller class pools. Teacher vacancies go unfilled for years.
+    </p>
+    <p>
+      Kids in Graham County get a worse education than kids in Scottsdale. Not because they're less capable. Because Phoenix doesn't fund rural schools fairly.
+    </p>
+
+    <h2>The Bill</h2>
+    <p>
+      The <strong>Arizona Education Equity Act</strong> fixes the funding formula so rural students get the resources they need, creates a Rural Teacher Recruitment Fund with housing assistance and loan forgiveness, expands dual enrollment partnerships with community colleges like EAC, and requires state reporting on teacher vacancies by district.
+    </p>
+
+    <blockquote>
+      "Eastern Arizona College saved my trajectory. It should be the start, not the backup plan."
+    </blockquote>
+
+    <blockquote>
+      "Kids in Graham County are just as smart as kids in Scottsdale. They just don't get the same resources."
+    </blockquote>
+
+    <div class="donation-banner">
+      <h3>Support Education Equity</h3>
+      <p>Every kid in LD-19 deserves a physics teacher who can actually teach physics.</p>
+      <a href={`${base}donate`} class="btn" style="background: #FF9800;">Contribute $5</a>
+    </div>
+  </div>
+</Layout>

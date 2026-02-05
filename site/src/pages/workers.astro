@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Worker Privacy & Safety Act" accent="#F44336">
+  <div class="content">
+    <p class="tagline" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #F44336;">Bill 3 &middot; Workers</p>
+    <h1>Legal on Friday. Fired on Monday. Why?</h1>
+
+    <p>
+      Arizona legalized recreational cannabis in 2020. Workplace drug testing laws never changed. Workers can legally purchase cannabis on Friday and be fired for a positive drug test on Monday &mdash; for a substance that is legal, that they used on their own time, that did not impair their work performance.
+    </p>
+
+    <h2>The Trap</h2>
+    <p>
+      Cannabis stays detectable in urine for 3-30 days after use. A positive test doesn't prove impairment &mdash; only past exposure. A worker who used cannabis two weeks ago tests positive. A worker who had eight beers last night tests negative.
+    </p>
+    <p>
+      Mining, construction, and transportation workers are most affected &mdash; the exact working-class jobs that make LD-19 run.
+    </p>
+
+    <h2>The Bill</h2>
+    <p>
+      The <strong>Worker Privacy &amp; Safety Act</strong> protects employees from discipline for legal off-duty cannabis use (except federally regulated safety-sensitive positions), replaces metabolite testing with impairment-based assessment, establishes elected worker safety committees with binding authority in mining operations, and protects whistleblowers who report safety violations.
+    </p>
+
+    <h2>Worker Voice in Safety</h2>
+    <p>
+      This is about restoring what workers lost when the unions were broken in 1983. Elected safety committees &mdash; not company-appointed ones. Binding authority on safety protocols. The right to halt operations for imminent danger without retaliation. Quarterly public safety reporting.
+    </p>
+
+    <blockquote>
+      "I ran heavy equipment for six years with a perfect safety record. Safety comes from training, culture, and accountability &mdash; not pee cups."
+    </blockquote>
+
+    <blockquote>
+      "The state legalized it. The state taxes it. But the state lets your boss fire you for it. Pick one."
+    </blockquote>
+
+    <div class="donation-banner">
+      <h3>Support Worker Rights</h3>
+      <p>Workers should have a voice in their own safety. Not a suggestion box &mdash; a vote.</p>
+      <a href={`${base}donate`} class="btn" style="background: #F44336;">Contribute $5</a>
+    </div>
+  </div>
+</Layout>

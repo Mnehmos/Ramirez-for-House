@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="All Six Bills">
+  <div class="content">
+    <h1>Six Bills. Not Slogans.</h1>
+    <p>
+      Anyone can say they support workers or oppose poverty. That's meaningless without specifics. These bills are the specifics. They're what I would actually do in office.
+    </p>
+    <p>
+      You can agree with them, disagree with them, or tell me they're wrong &mdash; but at least you know exactly where I stand.
+    </p>
+
+    <a href={`${base}water`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(33, 150, 243, 0.2); color: #2196F3;">Bill 1</span>
+      <h3>Family Well Protection Act</h3>
+      <p>Establishes residential well priority near industrial extraction. Monitoring, compensation fund, impact assessments. Your water before their profits.</p>
+    </a>
+
+    <a href={`${base}copper`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(184, 115, 51, 0.2); color: #B87333;">Bill 2</span>
+      <h3>Mine to Wire &amp; Chip Act</h3>
+      <p>Raises severance tax from 2.5% to 5%. Creates value-add manufacturing incentives near extraction sites. $135 million/year additional for Arizona communities.</p>
+    </a>
+
+    <a href={`${base}workers`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(244, 67, 54, 0.2); color: #F44336;">Bill 3</span>
+      <h3>Worker Privacy &amp; Safety Act</h3>
+      <p>Off-duty cannabis protection. Impairment-based testing. Elected worker safety committees with binding authority. Whistleblower protection.</p>
+    </a>
+
+    <a href={`${base}poverty`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(76, 175, 80, 0.2); color: #4CAF50;">Bill 4</span>
+      <h3>Rural Healthcare Access Act</h3>
+      <p>Hospital funding for extraction counties. Telehealth expansion. Provider recruitment. On-site emergency facilities at large mines.</p>
+    </a>
+
+    <a href={`${base}education`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(255, 152, 0, 0.2); color: #FF9800;">Bill 5</span>
+      <h3>Arizona Education Equity Act</h3>
+      <p>Fix the rural funding formula. Teacher recruitment with housing help and loan forgiveness. Dual enrollment expansion with EAC.</p>
+    </a>
+
+    <a href={`${base}history`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(205, 133, 63, 0.2); color: #CD853F;">Bill 6</span>
+      <h3>Worker Housing Freedom Act</h3>
+      <p>Separate employment from housing. 90-day transition. Fair-market options. End company town feudalism.</p>
+    </a>
+
+    <div class="donation-banner">
+      <h3>Support These Bills</h3>
+      <p>$5 qualifies us for Arizona Clean Elections. Help us bring these proposals to the legislature.</p>
+      <a href={`${base}donate`} class="btn">Contribute $5</a>
+    </div>
+
+    <p style="color: var(--color-muted); font-style: italic; text-align: center; margin-top: 2rem;">
+      That's how democracy should work.
+    </p>
+  </div>
+</Layout>

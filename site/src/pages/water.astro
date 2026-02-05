@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Family Well Protection Act" accent="#2196F3">
+  <div class="content">
+    <p class="tagline" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #2196F3;">Bill 1 &middot; Water</p>
+    <h1>Your Well or Their Profit?</h1>
+
+    <p>
+      Arizona's groundwater management laws were written to protect urban areas. Rural communities &mdash; especially mining communities &mdash; have no equivalent protection.
+    </p>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-number" style="color: #2196F3;">$30K</div>
+        <div class="stat-label">Cost to deepen a residential well</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #2196F3;">70K</div>
+        <div class="stat-label">Acre-feet/year Freeport uses at Morenci</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #2196F3;">2,000+</div>
+        <div class="stat-label">Residential wells near LD-19 mines</div>
+      </div>
+    </div>
+
+    <h2>The Problem</h2>
+    <p>
+      In Green Valley, the water table is dropping because ASARCO-Mission Mine, Freeport-McMoRan Sierrita Mine, and Farmers Investment Co. are industrial-scale water users pumping from the same aquifer as residents.
+    </p>
+    <p>
+      In Greenlee County, residents share groundwater with the largest copper mine in North America. No state law requires mines to prioritize residential water access over industrial extraction.
+    </p>
+    <p>
+      Wells go dry. Families drill deeper. The cost falls on homeowners.
+    </p>
+
+    <h2>The Bill</h2>
+    <p>
+      The <strong>Arizona Family Well Protection Act</strong> establishes residential priority for wells near industrial extraction, requires quarterly water table monitoring and disclosure from major industrial users, creates a compensation fund for well-deepening costs, and requires water impact assessments before new industrial extraction permits.
+    </p>
+
+    <h2>Why It Matters in LD-19</h2>
+    <p>
+      Every community in this district has a water story. Green Valley retirees watching their water table drop. Safford families competing with the Lone Star mine. Willcox agricultural water disputes.
+    </p>
+    <p>
+      Water is the one issue that crosses every political line in southern Arizona.
+    </p>
+
+    <blockquote>
+      "Green Valley: median age 73. These are retirees watching their wells go dry. That's not a political issue &mdash; it's a moral one."
+    </blockquote>
+
+    <div class="donation-banner">
+      <h3>Support the Family Well Protection Act</h3>
+      <p>$5 qualifies us for Arizona Clean Elections. Help bring this bill to the legislature.</p>
+      <a href={`${base}donate`} class="btn" style="background: #2196F3;">Contribute $5</a>
+    </div>
+  </div>
+</Layout>

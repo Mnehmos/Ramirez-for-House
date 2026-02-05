@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="About" accent="#B87333">
+  <div class="content">
+    <h1>Who's Running</h1>
+
+    <h2>Levario Ramirez</h2>
+    <p>
+      Third-generation Arizona copper. Grew up in Hayden-Winkelman &mdash; a smelter town where the soil had to be excavated because of contamination. A town that's lost 75% of its population.
+    </p>
+    <p>
+      Ran heavy equipment at Freeport-McMoRan's Morenci mine for six years. Perfect safety record. Earned Engineering Student of the Year 2022 at Eastern Arizona College. Built AI automation systems. Delivered DoorDash to keep the lights on.
+    </p>
+    <p>
+      I'm not a career politician. I'm a worker who got tired of watching wealth leave my community.
+    </p>
+
+    <h2>Why DSA?</h2>
+    <p>
+      Democratic Socialists of America. The "democratic" part isn't decoration &mdash; it's the whole point.
+    </p>
+    <p>
+      We don't want a revolution. We want to win elections, pass legislation, and prove that working-class politics works. If we're wrong, vote us out. That's how democracy works.
+    </p>
+    <p>
+      DSA means we believe the people who produce the wealth should have a democratic say in how it's distributed. Right now, Arizona's copper miners produce billions &mdash; and keep pennies. We think that math should change.
+    </p>
+
+    <h2>What I Believe</h2>
+    <p>
+      Workers deserve their share. Not a handout &mdash; their <em>share</em>. The people who dig the copper, grow the cotton, teach the kids, and care for the elderly are the backbone of LD-19. They deserve representation that fights for them.
+    </p>
+    <p>
+      I believe in specifics. That's why I'm running on six actual bills, not slogans. You can read every one of them, disagree with any of them, and tell me to my face why I'm wrong.
+    </p>
+    <p>
+      I believe in showing up. I'll be at the county fair, at the DoorDash drop-off, at your door. Ask me anything.
+    </p>
+
+    <h2>The District</h2>
+    <p>
+      Legislative District 19 spans Graham, Greenlee, and parts of Cochise, Pima, and Santa Cruz counties. From the Morenci copper mine to the Green Valley retirement community. From Willcox wine country to the suburban growth of Vail.
+    </p>
+    <p>
+      Five counties. Different economies. One shared problem: the people who live here don't get their fair share of the wealth they create.
+    </p>
+
+    <div class="donation-banner">
+      <h3>$5 Gets Us in the Conversation</h3>
+      <p>Arizona Clean Elections: 220 neighbors contributing $5 qualifies a candidate for public financing. No corporate money.</p>
+      <a href={`${base}donate`} class="btn">Contribute $5</a>
+    </div>
+  </div>
+</Layout>
