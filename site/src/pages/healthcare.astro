@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Rural Healthcare Access Act" accent="#4CAF50">
+  <div class="content">
+    <p class="tagline" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #4CAF50;">Bill 4 &middot; Healthcare</p>
+    <h1>Why Doesn't Greenlee County Have a Hospital?</h1>
+
+    <h2>Personal</h2>
+    <p>
+      Greenlee County produces billions in copper. It can't keep a hospital open. The nearest ER from Morenci is in Safford &mdash; 40-plus minutes away.
+    </p>
+    <p>
+      For a community built around one of the most dangerous industries in America, that's not healthcare. That's a gamble. I worked six years in that pit. I know what a bad fall looks like. Forty minutes is the difference between recovery and permanent disability.
+    </p>
+
+    <h2>The Problem</h2>
+    <p>
+      Rural hospital closures have accelerated across Arizona. Graham County's poverty rate is 17.7%. Greenlee County generates 90% of its GDP from mining but can't sustain basic medical infrastructure. Green Valley &mdash; median age 73 &mdash; is losing access to the care its retirees depend on.
+    </p>
+    <p>
+      Mining injuries require immediate trauma care. Rural communities need telehealth but lack broadband. Providers won't relocate without housing assistance or loan forgiveness. The state has no plan.
+    </p>
+
+    <h2>The Bill</h2>
+    <p>
+      The <strong>Rural Healthcare Access Act</strong> creates state matching funds for critical access hospital construction in counties with extraction-heavy economies, expands broadband grants for rural telehealth, establishes loan forgiveness and housing assistance for healthcare workers who serve rural Arizona for three or more years, and requires mining operations above 500 employees to maintain on-site emergency medical facilities.
+    </p>
+
+    <blockquote>
+      "If you get hurt in the pit at Morenci, the nearest ER is 40 minutes away. That's not healthcare &mdash; that's a gamble."
+    </blockquote>
+
+    <blockquote>
+      "Freeport profits $1.9 billion. Greenlee County can't keep a hospital open. Something is broken."
+    </blockquote>
+
+    <div class="donation-banner">
+      <h3>Support Rural Healthcare</h3>
+      <p>Every worker in LD-19 deserves an ER closer than 40 minutes.</p>
+      <a href={`${base}donate`} class="btn" style="background: #4CAF50;">Contribute $5</a>
+    </div>
+  </div>
+</Layout>
