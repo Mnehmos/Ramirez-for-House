@@ -11,13 +11,13 @@ const base = import.meta.env.BASE_URL;
       Third-generation Arizona copper. Six bills. No slogans. Running to prove working-class politics works.
     </p>
     <div style="margin-top: 2rem;">
-      <a href={`${base}bills`} class="btn">See the Bills</a>
-      <a href={`${base}donate`} class="btn btn-outline">Contribute $5</a>
+      <a href={`${base}bills/`} class="btn">See the Bills</a>
+      <a href={`${base}donate/`} class="btn btn-outline">Contribute $5</a>
     </div>
   </section>
 
   <div class="content">
-    <div class="stat-grid">
+    <div class="stat-grid" style="grid-template-columns: 1fr 1fr;">
       <div class="stat">
         <div class="stat-number">$4B+</div>
         <div class="stat-label">Copper extracted yearly</div>
@@ -38,7 +38,7 @@ const base = import.meta.env.BASE_URL;
 
     <h2>The Pitch</h2>
     <p>
-      I'm Levario Ramirez. I grew up in Hayden-Winkelman &mdash; a smelter town where the soil had to be excavated because of contamination. A town that's lost 75% of its population.
+      I'm Levario Ramirez. I grew up in Hayden &mdash; a smelter town where the soil had to be excavated because of contamination. A town that's lost 75% of its population. I've lived in Safford for 20 years.
     </p>
     <p>
       I ran heavy equipment at Freeport-McMoRan's Morenci mine for six years. Perfect safety record. I know what it means to do the work that builds this state.
@@ -52,40 +52,76 @@ const base = import.meta.env.BASE_URL;
       Anyone can say they support workers or oppose poverty. That's meaningless without specifics. These bills are the specifics &mdash; what I would actually do in office.
     </p>
 
-    <a href={`${base}water`} class="bill-card">
-      <span class="bill-tag" style="background: rgba(33, 150, 243, 0.2); color: #2196F3;">Bill 1</span>
+    <a href={`${base}water/`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(33, 150, 243, 0.2); color: #2196F3;">Bill 1 &middot; Water</span>
       <h3>Family Well Protection Act</h3>
       <p>Your water before their profits. Protect residential wells from industrial drawdown.</p>
+      <ul class="bill-specifics">
+        <li><strong>Residential priority</strong> for wells within 5 miles of industrial extraction</li>
+        <li><strong>Quarterly monitoring</strong> &mdash; industrial users above 100 acre-feet/year must report water table impacts</li>
+        <li><strong>Compensation fund</strong> paid by industrial users to cover well-deepening costs when residential wells go dry</li>
+        <li><strong>Impact assessment</strong> required before new extraction permits are issued near residential wells</li>
+      </ul>
     </a>
 
-    <a href={`${base}copper`} class="bill-card">
-      <span class="bill-tag" style="background: rgba(184, 115, 51, 0.2); color: #B87333;">Bill 2</span>
+    <a href={`${base}copper/`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(184, 115, 51, 0.2); color: #B87333;">Bill 2 &middot; Copper</span>
       <h3>Mine to Wire &amp; Chip Act</h3>
-      <p>Keep value-add manufacturing in mining country. Raise the severance tax from 2.5% to 5%.</p>
+      <p>$4 billion extracted, 6 cents stays. Keep value-add manufacturing in mining country.</p>
+      <ul class="bill-specifics">
+        <li><strong>Raise severance tax</strong> from 2.5% to 5% &mdash; still below Montana, New Mexico, and Nevada. Generates ~$135M/year for mining communities</li>
+        <li><strong>Value-add manufacturing incentives</strong> &mdash; tax breaks for copper wire, rod, and component manufacturing built near extraction sites</li>
+        <li><strong>Community investment fund</strong> from severance revenue for infrastructure, schools, and healthcare in extraction counties</li>
+        <li><strong>The math:</strong> Freeport-McMoRan made $1.9B in profit. CEO made $23.9M. Profit per U.S. worker: $48,717 &mdash; sent to shareholders, not workers</li>
+      </ul>
     </a>
 
-    <a href={`${base}workers`} class="bill-card">
-      <span class="bill-tag" style="background: rgba(244, 67, 54, 0.2); color: #F44336;">Bill 3</span>
+    <a href={`${base}workers/`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(244, 67, 54, 0.2); color: #F44336;">Bill 3 &middot; Workers</span>
       <h3>Worker Privacy &amp; Safety Act</h3>
       <p>Legal on Friday, fired on Monday. Fix the cannabis testing contradiction. Restore worker safety voice.</p>
+      <ul class="bill-specifics">
+        <li><strong>Off-duty protection</strong> &mdash; employers cannot fire for legal cannabis use on personal time</li>
+        <li><strong>Impairment-based testing</strong> replaces metabolite testing &mdash; test for actual impairment, not what someone did 3 weeks ago</li>
+        <li><strong>Elected worker safety committees</strong> with binding authority to flag hazards and halt unsafe conditions</li>
+        <li><strong>Whistleblower protection</strong> &mdash; workers who report safety violations cannot be retaliated against</li>
+      </ul>
     </a>
 
-    <a href={`${base}poverty`} class="bill-card">
-      <span class="bill-tag" style="background: rgba(76, 175, 80, 0.2); color: #4CAF50;">Bill 4</span>
+    <a href={`${base}poverty/`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(76, 175, 80, 0.2); color: #4CAF50;">Bill 4 &middot; Healthcare</span>
       <h3>Rural Healthcare Access Act</h3>
-      <p>A hospital in Greenlee County. Healthcare for mining communities and retirees.</p>
+      <p>Greenlee County has zero hospitals. The nearest ER is 40+ minutes from Morenci.</p>
+      <ul class="bill-specifics">
+        <li><strong>Critical access hospital funding</strong> &mdash; state matching funds for rural hospitals in counties with 50%+ extraction GDP</li>
+        <li><strong>Telehealth expansion</strong> &mdash; broadband infrastructure grants for rural healthcare facilities</li>
+        <li><strong>Provider recruitment</strong> &mdash; loan forgiveness and housing assistance for healthcare workers who serve 3+ years in rural Arizona</li>
+        <li><strong>On-site emergency facilities</strong> required at mining operations with 500+ employees</li>
+      </ul>
     </a>
 
-    <a href={`${base}education`} class="bill-card">
-      <span class="bill-tag" style="background: rgba(255, 152, 0, 0.2); color: #FF9800;">Bill 5</span>
+    <a href={`${base}education/`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(255, 152, 0, 0.2); color: #FF9800;">Bill 5 &middot; Education</span>
       <h3>Arizona Education Equity Act</h3>
-      <p>Fund rural schools fairly. Recruit teachers. Expand dual enrollment with EAC.</p>
+      <p>I dropped out of Safford High because my physics teacher was the biology teacher &mdash; and he couldn't answer my questions.</p>
+      <ul class="bill-specifics">
+        <li><strong>Fix the rural funding formula</strong> &mdash; account for transportation, facility costs, and smaller class pools</li>
+        <li><strong>Rural Teacher Recruitment Fund</strong> &mdash; housing assistance and loan forgiveness to bring qualified teachers to small towns</li>
+        <li><strong>Dual enrollment expansion</strong> with Eastern Arizona College &mdash; high schoolers earning college credit for free</li>
+        <li><strong>Personal:</strong> I went on to earn 120 credits at EAC and was named Engineering Student of the Year 2022. The system failed me. Not every kid can route around it.</li>
+      </ul>
     </a>
 
-    <a href={`${base}history`} class="bill-card">
-      <span class="bill-tag" style="background: rgba(139, 69, 19, 0.2); color: #CD853F;">Bill 6</span>
+    <a href={`${base}history/`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(139, 69, 19, 0.2); color: #CD853F;">Bill 6 &middot; Housing</span>
       <h3>Worker Housing Freedom Act</h3>
-      <p>End company town feudalism. Your home shouldn't depend on your employer's goodwill.</p>
+      <p>In Morenci, lose your job and you lose your home. Company-town feudalism, still running in 2026.</p>
+      <ul class="bill-specifics">
+        <li><strong>Separate employment from housing</strong> &mdash; termination cannot trigger eviction. 90-day transition period guaranteed</li>
+        <li><strong>Fair-market rent and purchase options</strong> &mdash; workers can buy at appraised value, not company-set prices</li>
+        <li><strong>Tax incentives for non-employer housing</strong> in company towns to create real alternatives</li>
+        <li><strong>The history:</strong> Unions were broken in Morenci 1983-86. Greenlee County voted Democratic from statehood (1912) to 1996, then flipped. Politics followed economics.</li>
+      </ul>
     </a>
 
     <div class="donation-banner">
@@ -93,7 +129,7 @@ const base = import.meta.env.BASE_URL;
       <p>
         Arizona Clean Elections: 220 people contributing $5 qualifies a candidate for public financing. No corporate money. Just neighbors believing in each other.
       </p>
-      <a href={`${base}donate`} class="btn">Contribute $5</a>
+      <a href={`${base}donate/`} class="btn">Contribute $5</a>
     </div>
 
     <h2>Still Skeptical?</h2>

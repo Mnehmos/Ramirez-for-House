@@ -188,7 +188,27 @@ const base = import.meta.env.BASE_URL;
     }
     .bill-card:hover { border-color: var(--color-accent); text-decoration: none; }
     .bill-card h3 { margin-top: 0; color: var(--color-text); }
-    .bill-card p { color: var(--color-muted); margin-bottom: 0; }
+    .bill-card p { color: var(--color-muted); margin-bottom: 0.75rem; }
+    .bill-specifics {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .bill-specifics li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      line-height: 1.5;
+    }
+    .bill-specifics li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+    }
+    .bill-specifics li strong { color: var(--color-text); }
     .bill-tag {
       display: inline-block;
       font-size: 0.75rem;
