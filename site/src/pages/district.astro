@@ -1,0 +1,787 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Our District" accent="#C9963B">
+  <!-- HERO -->
+  <section class="district-hero">
+    <p class="district-tagline">Legislative District 19</p>
+    <h1>Five Counties. Your Neighbors.</h1>
+    <p class="district-subtitle">
+      From the copper mines of Morenci to the retirement communities of Green Valley,
+      LD-19 is home to 230,000 Arizonans. Every community has its own story &mdash;
+      and its own challenges that Phoenix ignores.
+    </p>
+  </section>
+
+  <!-- OVERVIEW STATS -->
+  <div class="district-wide">
+    <div class="stat-grid" style="max-width: 800px; margin: 0 auto 2rem;">
+      <div class="stat">
+        <div class="stat-number" style="color: #C9963B;">~230K</div>
+        <div class="stat-label">Residents</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #C9963B;">5</div>
+        <div class="stat-label">Counties</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #C9963B;">29+</div>
+        <div class="stat-label">Communities</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #C9963B;">0</div>
+        <div class="stat-label">Hospitals in Greenlee County</div>
+      </div>
+    </div>
+
+    <!-- REGION TABS -->
+    <div class="region-tabs">
+      <button class="region-tab active" data-region="mining" style="--tab-color: #B87333;">
+        <span class="tab-icon">&#9874;</span>
+        <span class="tab-label">Mining Country</span>
+        <span class="tab-sub">Graham &amp; Greenlee</span>
+      </button>
+      <button class="region-tab" data-region="military" style="--tab-color: #5B8C5A;">
+        <span class="tab-icon">&#9733;</span>
+        <span class="tab-label">Military Country</span>
+        <span class="tab-sub">Cochise County</span>
+      </button>
+      <button class="region-tab" data-region="southwest" style="--tab-color: #C9963B;">
+        <span class="tab-icon">&#9788;</span>
+        <span class="tab-label">Growth &amp; Retirement</span>
+        <span class="tab-sub">Pima &amp; Santa Cruz</span>
+      </button>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MINING COUNTRY PANEL -->
+    <!-- ============================================ -->
+    <div class="region-panel active" id="panel-mining">
+      <div class="region-intro" style="border-color: #B87333;">
+        <h2 style="color: #B87333;">Mining Country</h2>
+        <p>
+          Graham and Greenlee Counties &mdash; where copper mining built the economy,
+          the 1983 Phelps Dodge strike broke the union, and families still depend on
+          the same industry that shaped their grandparents' lives. The largest copper mine
+          in North America operates here. So does one of the highest poverty rates in Arizona.
+        </p>
+      </div>
+
+      <div class="community-grid">
+        <!-- SAFFORD -->
+        <div class="community-card" style="--card-color: #B87333;">
+          <div class="community-header">
+            <h3>Safford</h3>
+            <span class="community-pop">10,257</span>
+          </div>
+          <p class="community-desc">
+            The commercial heart of the Gila Valley. Cotton farming at 54 times the national
+            average, but the water that feeds it faces a legal battle &mdash; the Gila River
+            adjudication could reshape water rights for 30,000 irrigated acres. 47% Hispanic.
+            Home to Eastern Arizona College.
+          </p>
+          <div class="issue-pills">
+            <a href={`${base}water/`} class="issue-pill" style="--pill-color: #2196F3;">Water</a>
+            <a href={`${base}healthcare/`} class="issue-pill" style="--pill-color: #4CAF50;">Healthcare</a>
+            <span class="issue-pill" style="--pill-color: #FFC107;">Economy</span>
+          </div>
+        </div>
+
+        <!-- THATCHER -->
+        <div class="community-card" style="--card-color: #B87333;">
+          <div class="community-header">
+            <h3>Thatcher</h3>
+            <span class="community-pop">5,627</span>
+          </div>
+          <p class="community-desc">
+            Eastern Arizona College's hometown. In December 2024, Thatcher elected its first
+            woman mayor in 109 years. When a community starts choosing new kinds of leaders,
+            something is shifting.
+          </p>
+          <div class="issue-pills">
+            <a href={`${base}water/`} class="issue-pill" style="--pill-color: #2196F3;">Water</a>
+            <a href={`${base}education/`} class="issue-pill" style="--pill-color: #FF9800;">Education</a>
+            <span class="issue-pill" style="--pill-color: #FFC107;">Economy</span>
+          </div>
+        </div>
+
+        <!-- CLIFTON -->
+        <div class="community-card" style="--card-color: #B87333;">
+          <div class="community-header">
+            <h3>Clifton</h3>
+            <span class="community-pop">3,912</span>
+          </div>
+          <p class="community-desc">
+            County seat of Arizona's smallest county. Built by miners, shaped by floods,
+            and forever marked by the 1983 strike that changed everything. Two-thirds Hispanic,
+            with a historic downtown that tells the story of working Arizona.
+          </p>
+          <div class="issue-pills">
+            <a href={`${base}copper/`} class="issue-pill" style="--pill-color: #B87333;">Mining</a>
+            <a href={`${base}healthcare/`} class="issue-pill" style="--pill-color: #4CAF50;">Healthcare</a>
+            <span class="issue-pill" style="--pill-color: #FFC107;">Economy</span>
+          </div>
+        </div>
+
+        <!-- MORENCI -->
+        <div class="community-card" style="--card-color: #B87333;">
+          <div class="community-header">
+            <h3>Morenci</h3>
+            <span class="community-pop">2,028</span>
+          </div>
+          <p class="community-desc">
+            North America's largest copper mine produces 700 million pounds a year.
+            The workers who make that happen live in a company town with no elected
+            government. No mayor. No city council. No voice.
+          </p>
+          <div class="issue-pills">
+            <a href={`${base}copper/`} class="issue-pill" style="--pill-color: #B87333;">Mining</a>
+            <a href={`${base}workers/`} class="issue-pill" style="--pill-color: #F44336;">Workers</a>
+            <a href={`${base}housing/`} class="issue-pill" style="--pill-color: #CD853F;">Housing</a>
+          </div>
+        </div>
+
+        <!-- DUNCAN -->
+        <div class="community-card" style="--card-color: #B87333;">
+          <div class="community-header">
+            <h3>Duncan</h3>
+            <span class="community-pop">689</span>
+          </div>
+          <p class="community-desc">
+            A farming community of 689 people on the Gila River, near the New Mexico border.
+            The kind of place where everyone knows everyone &mdash; and no politician ever visits.
+          </p>
+          <div class="issue-pills">
+            <a href={`${base}water/`} class="issue-pill" style="--pill-color: #2196F3;">Water</a>
+            <span class="issue-pill" style="--pill-color: #FFC107;">Economy</span>
+            <a href={`${base}healthcare/`} class="issue-pill" style="--pill-color: #4CAF50;">Healthcare</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mining Country: Bills -->
+      <div class="region-bills" style="border-color: #B87333;">
+        <h3>What We're Fighting For Here</h3>
+        <ul class="bill-specifics">
+          <li><a href={`${base}water/`}><strong>Family Well Protection Act</strong></a> &mdash; Protect residential wells from industrial-scale pumping</li>
+          <li><a href={`${base}copper/`}><strong>Mine to Wire Act</strong></a> &mdash; Worker safety and environmental accountability in mines</li>
+          <li><a href={`${base}healthcare/`}><strong>Rural Healthcare Access Act</strong></a> &mdash; Greenlee County has zero hospitals. Zero.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MILITARY COUNTRY PANEL -->
+    <!-- ============================================ -->
+    <div class="region-panel" id="panel-military">
+      <div class="region-intro" style="border-color: #5B8C5A;">
+        <h2 style="color: #5B8C5A;">Military Country</h2>
+        <p>
+          Cochise County &mdash; home to Fort Huachuca, Arizona's wine country,
+          and communities 15 miles from the Mexican border. $2.9 billion in military
+          economic impact. 500,000 tourists a year in Tombstone. And a water crisis
+          that threatens it all.
+        </p>
+      </div>
+
+      <div class="community-grid">
+        <!-- SIERRA VISTA -->
+        <div class="community-card" style="--card-color: #5B8C5A;">
+          <div class="community-header">
+            <h3>Sierra Vista</h3>
+            <span class="community-pop">44,710</span>
+          </div>
+          <p class="community-desc">
+            The largest city in LD-19 and home to Fort Huachuca, the Army's intelligence
+            center. 7,500 veterans. When the federal government shut down in October 2025,
+            4,000 civilian workers lost their paychecks overnight. $2.9 billion in annual
+            impact &mdash; and zero control over its own fate.
+          </p>
+          <div class="issue-pills">
+            <span class="issue-pill" style="--pill-color: #607D8B;">Military</span>
+            <a href={`${base}water/`} class="issue-pill" style="--pill-color: #2196F3;">Water</a>
+            <a href={`${base}healthcare/`} class="issue-pill" style="--pill-color: #4CAF50;">Healthcare</a>
+          </div>
+        </div>
+
+        <!-- BENSON -->
+        <div class="community-card" style="--card-color: #5B8C5A;">
+          <div class="community-header">
+            <h3>Benson</h3>
+            <span class="community-pop">5,355</span>
+          </div>
+          <p class="community-desc">
+            Gateway to Kartchner Caverns and a town in political crisis. Four of six
+            council members face recall elections in May 2026. The Vigneto
+            development &mdash; 28,000 planned homes on unregulated groundwater &mdash;
+            hangs over the San Pedro Valley.
+          </p>
+          <div class="issue-pills">
+            <a href={`${base}water/`} class="issue-pill" style="--pill-color: #2196F3;">Water</a>
+            <span class="issue-pill" style="--pill-color: #FFC107;">Economy</span>
+            <a href={`${base}healthcare/`} class="issue-pill" style="--pill-color: #4CAF50;">Healthcare</a>
+          </div>
+        </div>
+
+        <!-- WILLCOX -->
+        <div class="community-card" style="--card-color: #5B8C5A;">
+          <div class="community-header">
+            <h3>Willcox</h3>
+            <span class="community-pop">3,700</span>
+          </div>
+          <p class="community-desc">
+            Arizona's wine capital &mdash; 74% of the state's grapes grow here. But the
+            aquifer is dropping 2&ndash;5 feet a year and earth fissures are splitting
+            the valley floor. 60% Hispanic. 24% poverty. Incredible potential meets water crisis.
+          </p>
+          <div class="issue-pills">
+            <a href={`${base}water/`} class="issue-pill" style="--pill-color: #2196F3;">Water</a>
+            <span class="issue-pill" style="--pill-color: #FFC107;">Economy</span>
+            <a href={`${base}education/`} class="issue-pill" style="--pill-color: #FF9800;">Education</a>
+          </div>
+        </div>
+
+        <!-- HUACHUCA CITY -->
+        <div class="community-card" style="--card-color: #5B8C5A;">
+          <div class="community-header">
+            <h3>Huachuca City</h3>
+            <span class="community-pop">1,800</span>
+          </div>
+          <p class="community-desc">
+            The youngest community in our district &mdash; median age 37. Military families,
+            defense contractors, and the most diverse town in Cochise County. Roads are crumbling.
+            Housing is tight. The families who serve this country deserve infrastructure that works.
+          </p>
+          <div class="issue-pills">
+            <span class="issue-pill" style="--pill-color: #607D8B;">Military</span>
+            <a href={`${base}housing/`} class="issue-pill" style="--pill-color: #CD853F;">Housing</a>
+            <span class="issue-pill" style="--pill-color: #FFC107;">Economy</span>
+          </div>
+        </div>
+
+        <!-- TOMBSTONE -->
+        <div class="community-card" style="--card-color: #5B8C5A;">
+          <div class="community-header">
+            <h3>Tombstone</h3>
+            <span class="community-pop">1,300</span>
+          </div>
+          <p class="community-desc">
+            The Town Too Tough to Die draws 500,000 tourists a year. But 40% of residents
+            are over 65, and the nearest hospital is 25 miles away. The tourism economy
+            is seasonal. The healthcare gap is year-round.
+          </p>
+          <div class="issue-pills">
+            <a href={`${base}healthcare/`} class="issue-pill" style="--pill-color: #4CAF50;">Healthcare</a>
+            <a href={`${base}water/`} class="issue-pill" style="--pill-color: #2196F3;">Water</a>
+            <span class="issue-pill" style="--pill-color: #FFC107;">Economy</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="more-communities">
+        Plus <strong>St.&nbsp;David</strong> (where artesian wells that once flowed on their own are going dry),
+        <strong>Hereford</strong> (15 miles from the border, where ranchers deal with real consequences daily),
+        <strong>Pearce/Sunsites</strong> (55 minutes to the nearest hospital for a population that's 45% seniors),
+        and <strong>Bowie</strong> (400 people, 60 miles from a hospital &mdash; but they deserve a representative too).
+      </p>
+
+      <!-- Military Country: Bills -->
+      <div class="region-bills" style="border-color: #5B8C5A;">
+        <h3>What We're Fighting For Here</h3>
+        <ul class="bill-specifics">
+          <li><a href={`${base}water/`}><strong>Family Well Protection Act</strong></a> &mdash; Protect the San Pedro aquifer from industrial over-pumping</li>
+          <li><a href={`${base}healthcare/`}><strong>Rural Healthcare Access Act</strong></a> &mdash; Bring specialty care closer to home</li>
+          <li><a href={`${base}housing/`}><strong>Worker Housing Freedom Act</strong></a> &mdash; Affordable housing for military families</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SOUTHWEST PANEL -->
+    <!-- ============================================ -->
+    <div class="region-panel" id="panel-southwest">
+      <div class="region-intro" style="border-color: #C9963B;">
+        <h2 style="color: #C9963B;">Growth &amp; Retirement Country</h2>
+        <p>
+          Southeastern Pima and eastern Santa Cruz counties &mdash; where retirees lost their
+          hospital, fast-growing suburbs need schools, and a fully-permitted copper mine
+          threatens wine country and the Santa Rita Mountains. This is where Arizona's
+          future is being built &mdash; and where the fights over water, healthcare, and
+          quality of life are most urgent.
+        </p>
+      </div>
+
+      <div class="community-grid">
+        <!-- GREEN VALLEY -->
+        <div class="community-card" style="--card-color: #C9963B;">
+          <div class="community-header">
+            <h3>Green Valley</h3>
+            <span class="community-pop">21,581</span>
+          </div>
+          <p class="community-desc">
+            Median age: 73. The hospital closed in June 2022 under private equity
+            ownership. 100,000 people along I-19 lost their only emergency room.
+            84% of residents receive Social Security. This isn't a statistic &mdash;
+            it's your parents. Your grandparents.
+          </p>
+          <div class="issue-pills">
+            <a href={`${base}healthcare/`} class="issue-pill" style="--pill-color: #4CAF50;">Healthcare</a>
+            <a href={`${base}water/`} class="issue-pill" style="--pill-color: #2196F3;">Water</a>
+            <a href={`${base}housing/`} class="issue-pill" style="--pill-color: #CD853F;">Housing</a>
+          </div>
+        </div>
+
+        <!-- VAIL -->
+        <div class="community-card" style="--card-color: #C9963B;">
+          <div class="community-header">
+            <h3>Vail</h3>
+            <span class="community-pop">15,722</span>
+          </div>
+          <p class="community-desc">
+            The fastest-growing community in LD-19, with some of Arizona's top-rated schools.
+            14,800 students across 24 schools in Vail Unified. Rocking K is building 4,000
+            new homes. Growth needs investment &mdash; in water, roads, and the schools
+            that put this community on the map.
+          </p>
+          <div class="issue-pills">
+            <a href={`${base}education/`} class="issue-pill" style="--pill-color: #FF9800;">Education</a>
+            <a href={`${base}water/`} class="issue-pill" style="--pill-color: #2196F3;">Water</a>
+            <span class="issue-pill" style="--pill-color: #FFC107;">Growth</span>
+          </div>
+        </div>
+
+        <!-- CORONA DE TUCSON -->
+        <div class="community-card" style="--card-color: #C9963B;">
+          <div class="community-header">
+            <h3>Corona de Tucson</h3>
+            <span class="community-pop">9,240</span>
+          </div>
+          <p class="community-desc">
+            The wealthiest community in the district &mdash; median household income
+            $127,743. Grew 63% in a single decade, the largest growth rate in the
+            Tucson metro. These families chose southeastern Arizona for quality of life.
+            They're paying attention to who protects it.
+          </p>
+          <div class="issue-pills">
+            <span class="issue-pill" style="--pill-color: #FFC107;">Growth</span>
+            <a href={`${base}education/`} class="issue-pill" style="--pill-color: #FF9800;">Education</a>
+            <a href={`${base}water/`} class="issue-pill" style="--pill-color: #2196F3;">Water</a>
+          </div>
+        </div>
+
+        <!-- PATAGONIA -->
+        <div class="community-card" style="--card-color: #C9963B;">
+          <div class="community-header">
+            <h3>Patagonia</h3>
+            <span class="community-pop">800</span>
+          </div>
+          <p class="community-desc">
+            Eight hundred people. Artists, ranchers, birders &mdash; united against the
+            Copper World mine, now fully permitted, that threatens the water and landscape
+            they all depend on. Where conservation crosses every political line.
+          </p>
+          <div class="issue-pills">
+            <a href={`${base}copper/`} class="issue-pill" style="--pill-color: #B87333;">Mining</a>
+            <a href={`${base}water/`} class="issue-pill" style="--pill-color: #2196F3;">Water</a>
+            <a href={`${base}healthcare/`} class="issue-pill" style="--pill-color: #4CAF50;">Healthcare</a>
+          </div>
+        </div>
+
+        <!-- SONOITA/ELGIN -->
+        <div class="community-card" style="--card-color: #C9963B;">
+          <div class="community-header">
+            <h3>Sonoita &amp; Elgin</h3>
+            <span class="community-pop">~900</span>
+          </div>
+          <p class="community-desc">
+            Arizona's original wine country &mdash; 15 wineries at 5,000 feet, producing
+            vintages that compete nationally. The economy runs on tourism and terroir.
+            Both require water that isn't guaranteed.
+          </p>
+          <div class="issue-pills">
+            <a href={`${base}water/`} class="issue-pill" style="--pill-color: #2196F3;">Water</a>
+            <span class="issue-pill" style="--pill-color: #FFC107;">Economy</span>
+            <a href={`${base}copper/`} class="issue-pill" style="--pill-color: #B87333;">Mining</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Southwest: Bills -->
+      <div class="region-bills" style="border-color: #C9963B;">
+        <h3>What We're Fighting For Here</h3>
+        <ul class="bill-specifics">
+          <li><a href={`${base}healthcare/`}><strong>Rural Healthcare Access Act</strong></a> &mdash; Green Valley lost its hospital. 100,000 people need it back.</li>
+          <li><a href={`${base}education/`}><strong>Education Equity Act</strong></a> &mdash; Fast-growing districts like Vail need funding that keeps pace</li>
+          <li><a href={`${base}copper/`}><strong>Mine to Wire Act</strong></a> &mdash; Environmental accountability for projects like Copper World</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- UNIVERSAL ISSUES BRIDGE -->
+    <!-- ============================================ -->
+    <div class="universal-section">
+      <h2 style="color: #C9963B; text-align: center;">Three Issues. Every Community.</h2>
+      <div class="universal-grid">
+        <div class="universal-card">
+          <div class="universal-icon" style="color: #2196F3;">&#9679;</div>
+          <h3>Water</h3>
+          <p>
+            Every community in LD-19 faces water insecurity. Aquifers dropping. Wells
+            going dry. No Active Management Areas protecting rural residents. This crosses
+            every party line.
+          </p>
+          <a href={`${base}water/`} class="btn-outline" style="border-color: #2196F3; color: #2196F3;">Family Well Protection Act &rarr;</a>
+        </div>
+        <div class="universal-card">
+          <div class="universal-icon" style="color: #4CAF50;">&#9679;</div>
+          <h3>Healthcare</h3>
+          <p>
+            Hospital deserts. Specialist shortages. Drive times that turn emergencies
+            into tragedies. An entire county with zero hospital beds.
+          </p>
+          <a href={`${base}healthcare/`} class="btn-outline" style="border-color: #4CAF50; color: #4CAF50;">Rural Healthcare Access Act &rarr;</a>
+        </div>
+        <div class="universal-card">
+          <div class="universal-icon" style="color: #FFC107;">&#9679;</div>
+          <h3>Cost of Living</h3>
+          <p>
+            Retirees on fixed incomes. Military families priced out by BAH distortion.
+            Mining towns where the wealth leaves and the poverty stays.
+          </p>
+          <a href={`${base}housing/`} class="btn-outline" style="border-color: #FFC107; color: #FFC107;">Worker Housing Freedom Act &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="donation-banner" style="margin-top: 3rem;">
+      <h3 style="color: #C9963B;">Every Community Deserves a Voice</h3>
+      <p>
+        $5 qualifies us for Arizona Clean Elections funding.
+        Help us reach every corner of this district.
+      </p>
+      <a href={`${base}donate/`} class="btn" style="background: #C9963B;">Contribute $5</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* HERO */
+  .district-hero {
+    text-align: center;
+    padding: 4rem 1.5rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .district-tagline {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #C9963B;
+    margin-bottom: 0.5rem;
+  }
+  .district-hero h1 {
+    font-size: 3rem;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .district-subtitle {
+    font-size: 1.15rem;
+    color: #999;
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* WIDE CONTAINER */
+  .district-wide {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+  }
+
+  /* REGION TABS */
+  .region-tabs {
+    display: flex;
+    gap: 0.75rem;
+    margin: 2.5rem 0 0;
+    justify-content: center;
+  }
+  .region-tab {
+    flex: 1;
+    max-width: 300px;
+    background: #141414;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 1.25rem 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.25s ease;
+    color: #888;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+  .region-tab:hover {
+    border-color: var(--tab-color);
+    color: #e8e8e8;
+  }
+  .region-tab.active {
+    background: var(--tab-color);
+    border-color: var(--tab-color);
+    color: #0a0a0a;
+  }
+  .tab-icon {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .tab-label {
+    display: block;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .tab-sub {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-top: 0.15rem;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* REGION PANELS */
+  .region-panel {
+    display: none;
+    animation: fadeIn 0.3s ease;
+  }
+  .region-panel.active {
+    display: block;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .region-intro {
+    border-left: 4px solid;
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    background: #141414;
+    border-radius: 0 8px 8px 0;
+  }
+  .region-intro h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  .region-intro p {
+    color: #bbb;
+    margin-bottom: 0;
+    max-width: 720px;
+  }
+
+  /* COMMUNITY GRID */
+  .community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  /* COMMUNITY CARD */
+  .community-card {
+    background: #141414;
+    border: 1px solid #222;
+    border-top: 3px solid var(--card-color);
+    border-radius: 8px;
+    padding: 1.25rem 1.25rem 1rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .community-card:hover {
+    border-color: var(--card-color);
+    transform: translateY(-2px);
+  }
+  .community-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+  }
+  .community-header h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: #e8e8e8;
+  }
+  .community-pop {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--card-color);
+    white-space: nowrap;
+  }
+  .community-desc {
+    font-size: 0.9rem;
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  /* ISSUE PILLS */
+  .issue-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .issue-pill {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.2rem 0.55rem;
+    border-radius: 3px;
+    background: color-mix(in srgb, var(--pill-color) 15%, transparent);
+    color: var(--pill-color);
+    border: 1px solid color-mix(in srgb, var(--pill-color) 30%, transparent);
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  a.issue-pill:hover {
+    background: color-mix(in srgb, var(--pill-color) 25%, transparent);
+    text-decoration: none;
+  }
+
+  /* MORE COMMUNITIES */
+  .more-communities {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.7;
+    margin: 0.5rem 0 1.5rem;
+    padding: 0 0.25rem;
+  }
+  .more-communities strong {
+    color: #ccc;
+  }
+
+  /* REGION BILLS */
+  .region-bills {
+    border-left: 4px solid;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0 0;
+    background: #141414;
+    border-radius: 0 8px 8px 0;
+  }
+  .region-bills h3 {
+    margin-top: 0;
+    color: #e8e8e8;
+  }
+
+  /* UNIVERSAL SECTION */
+  .universal-section {
+    margin: 4rem 0 0;
+    padding-top: 3rem;
+    border-top: 1px solid #222;
+  }
+  .universal-section h2 {
+    margin-bottom: 1.5rem;
+  }
+  .universal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+  .universal-card {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .universal-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .universal-card h3 {
+    margin-top: 0;
+    color: #e8e8e8;
+  }
+  .universal-card p {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 1rem;
+  }
+  .universal-card .btn-outline {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .universal-card .btn-outline:hover {
+    background: color-mix(in srgb, currentColor 10%, transparent);
+    text-decoration: none;
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .district-hero h1 { font-size: 2rem; }
+    .district-subtitle { font-size: 1rem; }
+    .region-tabs {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .region-tab {
+      max-width: none;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-align: left;
+    }
+    .tab-icon {
+      display: inline;
+      font-size: 1.25rem;
+      margin-bottom: 0;
+    }
+    .tab-label { display: inline; font-size: 0.95rem; }
+    .tab-sub { display: inline; margin-top: 0; }
+    .community-grid {
+      grid-template-columns: 1fr;
+    }
+    .universal-grid {
+      grid-template-columns: 1fr;
+    }
+    .region-intro, .region-bills {
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .district-hero { padding: 2.5rem 1rem 1rem; }
+    .district-hero h1 { font-size: 1.6rem; }
+    .community-header h3 { font-size: 1rem; }
+  }
+</style>
+
+<script>
+  // Region tab switching
+  document.querySelectorAll('.region-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Deactivate all tabs
+      document.querySelectorAll('.region-tab').forEach(t => t.classList.remove('active'));
+      // Deactivate all panels
+      document.querySelectorAll('.region-panel').forEach(p => p.classList.remove('active'));
+      // Activate clicked tab
+      tab.classList.add('active');
+      // Activate corresponding panel
+      const region = tab.getAttribute('data-region');
+      const panel = document.getElementById('panel-' + region);
+      if (panel) panel.classList.add('active');
+    });
+  });
+</script>
