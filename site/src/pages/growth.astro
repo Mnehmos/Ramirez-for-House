@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Growth Pays Its Way Act" accent="#26C6DA">
+  <div class="content">
+    <p class="tagline" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #26C6DA;">Bill 8 &middot; Growth</p>
+    <h1>They Build. You Pay.</h1>
+
+    <p>
+      Vail grew 45% in a single decade. Corona de Tucson grew 63%. Rocking K is building 4,000 new homes. Developers collect the profits. Existing residents get crowded roads, strained water, and school waitlists. That's not growth &mdash; it's cost-shifting.
+    </p>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-number" style="color: #26C6DA;">63%</div>
+        <div class="stat-label">Corona de Tucson growth rate in one decade</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #26C6DA;">4,000</div>
+        <div class="stat-label">New homes planned at Rocking K Ranch</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #26C6DA;">14,831</div>
+        <div class="stat-label">Students in Vail USD &mdash; and climbing</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #26C6DA;">0</div>
+        <div class="stat-label">Municipal governments in Vail, Corona, or Green Valley</div>
+      </div>
+    </div>
+
+    <h2>The Problem</h2>
+    <p>
+      Southeastern Pima County is one of the fastest-growing areas in Arizona. Families move here for the schools, the space, and the quality of life. But none of these communities are incorporated &mdash; they have no mayor, no city council, no local planning authority. Development decisions are made by Pima County in Tucson, not by the people who live with the consequences.
+    </p>
+    <p>
+      Arizona law doesn't require developers to fund the infrastructure their projects need. New subdivisions get approved. Roads crumble under the traffic. Water demand spikes from aquifers with no Active Management Area protection. Vail USD builds schools as fast as it can, but state funding formulas weren't designed for this kind of growth. Existing homeowners absorb the costs through property taxes and declining service quality.
+    </p>
+    <p>
+      Meanwhile, Green Valley &mdash; 22,000 people, the second-largest community in LD-19 &mdash; has no municipal government at all. The hospital closed in 2022. Decisions about their community are made 30 miles away by people who don't live there.
+    </p>
+
+    <h2>The Bill</h2>
+    <p>
+      The <strong>Growth Pays Its Way Act</strong> makes development accountable to the communities it changes:
+    </p>
+
+    <ul class="bill-specifics">
+      <li><strong>Development Impact Fees</strong> &mdash; Major subdivisions (50+ lots) must fund proportional infrastructure: roads, water lines, school capacity, fire/EMS. The developer pays, not the existing homeowner.</li>
+      <li><strong>100-Year Water Adequacy</strong> &mdash; Require certified 100-year water supply before major subdivision approval in areas outside Active Management Areas. Right now, only urban AMAs have this requirement. Vail, Corona de Tucson, and Green Valley have no such protection.</li>
+      <li><strong>School Construction Match</strong> &mdash; State matching funds for school districts growing above 3% annual enrollment. Vail USD has built 24 schools and counting &mdash; the state should match that commitment.</li>
+      <li><strong>Community Planning Zones</strong> &mdash; Unincorporated communities above 5,000 population can form advisory planning boards with formal input on zoning, development permits, and infrastructure priorities. Not full incorporation &mdash; but a voice.</li>
+      <li><strong>Infrastructure Sequencing</strong> &mdash; Roads, water, and emergency services must be in place before new subdivision phases receive certificates of occupancy. Build the road before you sell the house.</li>
+    </ul>
+
+    <h2>Why It Matters in LD-19</h2>
+
+    <h3>Vail &amp; Rocking K</h3>
+    <p>
+      Vail Unified School District is one of the highest-rated in Arizona &mdash; and that's exactly why families keep coming. But 4,000 new homes at Rocking K means thousands more students, thousands more cars on roads that are already at capacity, and thousands more households drawing from the same aquifer. Growth is good. Unfunded growth is a time bomb.
+    </p>
+
+    <h3>Corona de Tucson</h3>
+    <p>
+      The wealthiest community in LD-19 &mdash; median household income $127,743 &mdash; and it has no town government. Residents here chose southeastern Arizona for quality of life. They're paying attention to who protects it, and they're not getting representation from Tucson.
+    </p>
+
+    <h3>Green Valley</h3>
+    <p>
+      22,000 people, median age 73, no hospital since June 2022, no municipal government ever. The recreation center and homeowner associations function as quasi-government, but they can't zone land, regulate development, or negotiate with the county. When the hospital closed under private equity ownership, there was no local government to fight for it.
+    </p>
+
+    <blockquote>
+      "Corona de Tucson grew 63% in a decade. The developer got paid. The school district got overwhelmed. The aquifer got drained. The homeowners got the bill. That's not a free market &mdash; it's a rigged one."
+    </blockquote>
+
+    <h2>What This Isn't</h2>
+    <p>
+      This isn't anti-growth. Vail, Corona de Tucson, and southeastern Pima County are thriving because people want to live there. The bill doesn't stop development &mdash; it makes development pay its own way. If your project is profitable enough to build, it's profitable enough to fund the infrastructure it requires.
+    </p>
+
+    <div class="donation-banner">
+      <h3>Support the Growth Pays Its Way Act</h3>
+      <p>$5 qualifies us for Arizona Clean Elections. Help make growth work for the people who already live here.</p>
+      <a href={`${base}donate`} class="btn" style="background: #26C6DA; color: #0a0a0a;">Contribute $5</a>
+    </div>
+  </div>
+</Layout>
