@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<Layout title="All Six Bills">
+<Layout title="All Seven Bills">
   <div class="content">
-    <h1>Six Bills. Not Slogans.</h1>
+    <h1>Seven Bills. Not Slogans.</h1>
     <p>
       Anyone can say they support workers or oppose poverty. That's meaningless without specifics. These bills are the specifics. They're what I would actually do in office.
     </p>
@@ -47,6 +47,12 @@ const base = import.meta.env.BASE_URL;
       <span class="bill-tag" style="background: rgba(205, 133, 63, 0.2); color: #CD853F;">Bill 6</span>
       <h3>Worker Housing Freedom Act</h3>
       <p>Separate employment from housing. 90-day transition. Fair-market options. End company town feudalism.</p>
+    </a>
+
+    <a href={`${base}economy`} class="bill-card">
+      <span class="bill-tag" style="background: rgba(255, 193, 7, 0.2); color: #FFC107;">Bill 7</span>
+      <h3>Hometown Prosperity Act</h3>
+      <p>Rural broadband. Value-added processing incentives. Main Street microloans. Workforce pipeline grants. Keep the wealth where it's created.</p>
     </a>
 
     <div class="donation-banner">

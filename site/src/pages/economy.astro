@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Hometown Prosperity Act" accent="#FFC107">
+  <div class="content">
+    <p class="tagline" style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #FFC107;">Bill 7 &middot; Economy</p>
+    <h1>The Wealth Leaves. You Don't.</h1>
+
+    <p>
+      LD-19 produces billions in copper, feeds a major military installation, and grows 74% of Arizona's wine grapes. But the wealth doesn't stay. Raw ore ships to smelters overseas. Defense contracts flow to Virginia. Young people leave for Phoenix because there's nothing to stay for.
+    </p>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-number" style="color: #FFC107;">$0</div>
+        <div class="stat-label">Copper smelted in Greenlee County</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #FFC107;">90%</div>
+        <div class="stat-label">Greenlee GDP from one company</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #FFC107;">15</div>
+        <div class="stat-label">Wineries in Sonoita/Elgin &mdash; zero state support</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" style="color: #FFC107;">0</div>
+        <div class="stat-label">Broadband providers in parts of Greenlee County</div>
+      </div>
+    </div>
+
+    <h2>The Problem</h2>
+    <p>
+      Single-industry towns are hostage economies. When Freeport-McMoRan cuts shifts, Greenlee County has no plan B. When Fort Huachuca faces a BRAC review, Sierra Vista holds its breath. When drought hits the Willcox Basin, farming families have nowhere to pivot.
+    </p>
+    <p>
+      Arizona's economic development money goes to Maricopa County. Tax incentives land semiconductor fabs in Phoenix and data centers in Mesa. Rural southern Arizona gets nothing &mdash; except the bill when a mine closes or a base downsizes.
+    </p>
+    <p>
+      Meanwhile, real opportunities are right here: a wine industry growing without any state support, two community colleges ready to train workers, tourism assets that draw visitors from around the world, and broadband gaps that one investment could close.
+    </p>
+
+    <h2>The Bill</h2>
+    <p>
+      The <strong>Arizona Hometown Prosperity Act</strong> keeps economic value where it's created:
+    </p>
+
+    <ul class="bill-specifics">
+      <li><strong>Rural Broadband Fund</strong> &mdash; Dedicated infrastructure grants for counties under 50,000 population. Remote work doesn't require leaving home if the internet works.</li>
+      <li><strong>Value-Added Processing Incentives</strong> &mdash; Tax credits for companies that process raw materials in the county of extraction. Smelt copper in Greenlee. Bottle wine in Sonoita. Mill lumber in Graham.</li>
+      <li><strong>Main Street Microloans</strong> &mdash; $10K&ndash;$50K low-interest loans for small businesses in communities under 10,000 population. Funded from severance tax revenue.</li>
+      <li><strong>Workforce Pipeline Grants</strong> &mdash; Direct funding to Eastern Arizona College and Cochise College for certificate programs tied to local industry needs: mine safety, welding, nursing, viticulture, solar installation.</li>
+      <li><strong>Tourism Infrastructure Fund</strong> &mdash; Matching grants for rural communities to develop visitor infrastructure. Tombstone, Kartchner Caverns, Chiricahua, the wine trail, and birding tourism all generate revenue but get no state investment.</li>
+      <li><strong>Single-Industry Diversification Plans</strong> &mdash; Counties where one employer accounts for &gt;40% of GDP must develop diversification plans with state economic development support and funding.</li>
+    </ul>
+
+    <h2>Why It Matters in LD-19</h2>
+
+    <h3>Mining Communities</h3>
+    <p>
+      Greenlee County's economy is 90% one mine. The median household income is $75K when the mine runs &mdash; and devastation when it doesn't. The 1983 Phelps Dodge strike proved what happens when the only employer decides to reset the terms. Diversification isn't anti-mining. It's insurance.
+    </p>
+
+    <h3>Military Communities</h3>
+    <p>
+      Sierra Vista exists because of Fort Huachuca. Every BRAC round is an existential threat. The base brings 12,000+ jobs, but that also means 12,000+ jobs that Congress can vote away. Tech sector spillover from the base's intelligence mission is real &mdash; but only if broadband and workforce programs support it.
+    </p>
+
+    <h3>Agricultural Communities</h3>
+    <p>
+      Willcox grows 74% of Arizona's wine grapes and has become a genuine destination. But the state invests nothing in this industry. Sonoita/Elgin has 15 wineries operating without a single dollar of state tourism marketing. The pistachio and pecan orchards in the Sulphur Springs Valley add millions in value &mdash; value that leaves the county as raw product.
+    </p>
+
+    <h3>Retirement Communities</h3>
+    <p>
+      Green Valley's 22,000 retirees spend money locally, but the commercial infrastructure is thin. Vail is one of the fastest-growing communities in Arizona, but economic development planning happens in Tucson, not Vail. Corona de Tucson is 9,200 people with no town center.
+    </p>
+
+    <blockquote>
+      "Greenlee County generates hundreds of millions in mineral wealth and has no hospital. Morenci houses 2,000 workers and has no elected government. That's not an economy &mdash; it's an extraction."
+    </blockquote>
+
+    <h2>What This Isn't</h2>
+    <p>
+      This isn't anti-mining, anti-military, or anti-agriculture. Those are the backbone of LD-19 and should stay. This is about building a second leg to stand on &mdash; so that when copper prices drop, or a base review comes, or drought hits, families have options that don't involve a U-Haul to Phoenix.
+    </p>
+
+    <div class="donation-banner">
+      <h3>Support the Hometown Prosperity Act</h3>
+      <p>$5 qualifies us for Arizona Clean Elections. Help bring real economic development to southern Arizona.</p>
+      <a href={`${base}donate`} class="btn" style="background: #FFC107; color: #0a0a0a;">Contribute $5</a>
+    </div>
+  </div>
+</Layout>
