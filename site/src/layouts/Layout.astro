@@ -113,6 +113,77 @@ const base = import.meta.env.BASE_URL;
     }
     .nav-links .donate-link:hover { opacity: 0.9; }
 
+    /* DROPDOWN */
+    .nav-dropdown {
+      position: relative;
+    }
+    .nav-dropdown-toggle {
+      cursor: pointer;
+    }
+    .dropdown-arrow {
+      font-size: 0.65em;
+      margin-left: 2px;
+    }
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #141414;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 0.5rem 0;
+      min-width: 180px;
+      list-style: none;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      z-index: 200;
+    }
+    .nav-dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -0.5rem;
+      left: 0;
+      right: 0;
+      height: 0.5rem;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu {
+      display: block;
+    }
+    .nav-dropdown-menu li {
+      list-style: none;
+    }
+    .nav-dropdown-menu a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      color: var(--color-muted);
+      white-space: nowrap;
+      transition: color 0.15s, background 0.15s;
+    }
+    .nav-dropdown-menu a:hover {
+      color: var(--color-text);
+      background: rgba(255,255,255,0.05);
+    }
+    .bill-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .nav-dropdown-all {
+      border-top: 1px solid #333;
+      margin-top: 0.25rem;
+      padding-top: 0.25rem;
+    }
+    .nav-dropdown-all a {
+      color: var(--color-accent);
+      font-weight: 500;
+    }
+
     .hamburger {
       display: none;
       background: none;
@@ -281,6 +352,23 @@ const base = import.meta.env.BASE_URL;
         padding: 1rem;
       }
       .hamburger { display: block; }
+      .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0 0 0 0.75rem;
+        min-width: 0;
+      }
+      .nav-dropdown-menu::before { display: none; }
+      .nav-links.open .nav-dropdown .nav-dropdown-menu {
+        display: block;
+      }
+      .nav-dropdown-menu a {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+      }
       .hero h1 { font-size: 2rem; }
       h1 { font-size: 1.75rem; }
       h2 { font-size: 1.4rem; }
@@ -296,15 +384,20 @@ const base = import.meta.env.BASE_URL;
       <ul class="nav-links" id="nav-links">
         <li><a href={`${base}about`}>About</a></li>
         <li><a href={`${base}district`}>District</a></li>
-        <li><a href={`${base}water`}>Water</a></li>
-        <li><a href={`${base}copper`}>Copper</a></li>
-        <li><a href={`${base}workers`}>Workers</a></li>
-        <li><a href={`${base}healthcare`}>Healthcare</a></li>
-        <li><a href={`${base}education`}>Education</a></li>
-        <li><a href={`${base}housing`}>Housing</a></li>
-        <li><a href={`${base}economy`}>Economy</a></li>
-        <li><a href={`${base}growth`}>Growth</a></li>
-        <li><a href={`${base}bills`}>Bills</a></li>
+        <li class="nav-dropdown">
+          <a href={`${base}bills`} class="nav-dropdown-toggle">Bills <span class="dropdown-arrow">&#9662;</span></a>
+          <ul class="nav-dropdown-menu">
+            <li><a href={`${base}water`}><span class="bill-dot" style="background:#2196F3;"></span> Water</a></li>
+            <li><a href={`${base}copper`}><span class="bill-dot" style="background:#B87333;"></span> Copper</a></li>
+            <li><a href={`${base}workers`}><span class="bill-dot" style="background:#F44336;"></span> Workers</a></li>
+            <li><a href={`${base}healthcare`}><span class="bill-dot" style="background:#4CAF50;"></span> Healthcare</a></li>
+            <li><a href={`${base}education`}><span class="bill-dot" style="background:#FF9800;"></span> Education</a></li>
+            <li><a href={`${base}housing`}><span class="bill-dot" style="background:#CD853F;"></span> Housing</a></li>
+            <li><a href={`${base}economy`}><span class="bill-dot" style="background:#FFC107;"></span> Economy</a></li>
+            <li><a href={`${base}growth`}><span class="bill-dot" style="background:#26C6DA;"></span> Growth</a></li>
+            <li class="nav-dropdown-all"><a href={`${base}bills`}>All Eight Bills &rarr;</a></li>
+          </ul>
+        </li>
         <li><a href={`${base}donate`} class="donate-link">Donate $5</a></li>
       </ul>
     </div>
